@@ -93,7 +93,7 @@ if __name__ == '__main__':
     # TODO: Lookup the correct directory
     print(f"Ingesting master {filter} filter flats frames for ccd {ccd}.")
     cmd = f"ingestCalibs.py {datadir}"
-    cmd += f" {datadir}/rerun/{rerun}/calib/flat/{date}/*/*.fits"
+    cmd += f" {datadir}/rerun/{rerun}/calib/flat/{date}/*/*.fits*"
     cmd += f" --validity {validity}"
     cmd += f" --calib {calibdir} --mode=link"
     cmd += " --config clobber=True"
